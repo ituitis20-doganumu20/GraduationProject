@@ -1,13 +1,15 @@
 import os
 import tensorflow as tf
 from tensorflow.keras import layers, models
+from tensorflow.keras.models import load_model
 import numpy as np
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(script_dir, 'train_data.txt')
+model_path= os.path.join(script_dir, 'model.h5')
 #output_file_path = os.path.join(script_dir, 'binary2.bin')
 
-# Generate random input sequences for training
+# Generate random sequences for training
 num_samples = 1000
 input_size = 32
 output_size = 1024
@@ -27,13 +29,23 @@ try:
         with open(output_file_path, 'wb') as output_file:
             output_file.write(binary_representation.encode('utf-8'))
         """
-        
-
 except FileNotFoundError:
     print(f"File not found: {file_path}")
 except Exception as e:
     print(f"An error occurred: {e}")
 
+# Function to load the model
+def load_the_model(input_size):
+    try:
+        # Load existing model
+        model = load_model(model_path)
+        print("Model loaded successfully.")
+    except (OSError, IOError):
+        # Create a new model if loading fails
+        print("Existing model not found. Creating a new model.")
+        model = create_model(input_size)
+
+    return model, model_path
 
 # Convert binary representation to a list of integers
 binary_list = [int(bit) for bit in binary_representation]
@@ -41,83 +53,131 @@ binary_list = [int(bit) for bit in binary_representation]
 #print("Binary List:", binary_list)
 #print(len(binary_list))
 
-
 # Function to generate random binary sequence as input
 def generate_random_sequence(sequence_length):
     return np.random.randint(0, 2, size=(sequence_length,))
 
+def create_model(input_size):
+    # Build the DCNN model
+    model = models.Sequential([
+        layers.Reshape((input_size, 1), input_shape=(input_size,)),
+        layers.Conv1D(64, kernel_size=3, activation='relu'),
+        layers.Flatten(),
+        layers.Dense(128, activation='relu'),
+        layers.Dense(256, activation='relu'),
+        layers.Dense(512, activation='relu'),
+        layers.Dense(1024, activation='sigmoid')
+    ])
 
-sample_size = len(binary_list) // num_samples
-# Create training data
-X_train = np.array([generate_random_sequence(input_size) for _ in range(num_samples)])
-# Split binary_list into 100 samples for y_train
-# Split binary_list into 100 samples for y_train
-y_train = np.array([binary_list[i*sample_size : (i+1)*sample_size] for i in range(num_samples)])
+    # Compile the model
+    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+    
+    return model
 
-# Ensure y_train has the shape (100, 1024)
-#y_train = y_train.reshape((num_samples, sample_size))
+def train_model(model):
+    # Train the model
+    sample_size = len(binary_list) // num_samples
+    # Create training data
+    X_train = np.array([generate_random_sequence(input_size) for _ in range(num_samples)])
+    # Split binary_list into 100 samples for y_train
+    y_train = np.array([binary_list[i*sample_size : (i+1)*sample_size] for i in range(num_samples)])
+    
+    model.fit(X_train, y_train, epochs=200, batch_size=32)
+    return model
 
+def save_model(model, model_path):
+    model.save(model_path)
+    print("Model saved successfully.")
 
-print((X_train.shape))
-print(y_train.shape)
-# Build the DCNN model
-model = models.Sequential([
-    layers.Reshape((input_size, 1), input_shape=(input_size,)),
-    layers.Conv1D(64, kernel_size=3, activation='relu'),
-    layers.Flatten(),
-    layers.Dense(128, activation='relu'),
-    layers.Dense(256, activation='relu'),
-    layers.Dense(512, activation='relu'),
-    layers.Dense(1024, activation='sigmoid')
-])
+def test_model(model):
+    # Generate new random input for testing
+    input_test = np.array([generate_random_sequence(input_size)])
+    print("here is test input:")
+    print(input_test)
+    # Make predictions using the trained model
+    output_prediction = model.predict(input_test)
 
-# Compile the model
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+    # Apply a threshold to convert values to 0 or 1
+    threshold = 0.5
+    output_prediction_binary = (output_prediction > threshold).astype(int)
 
-# Train the model
-model.fit(X_train, y_train, epochs=200, batch_size=32)
+    # Print the generated pseudorandom sequence
+    print("Generated Pseudorandom Sequence:")
+    print(output_prediction.flatten().astype(int))
+    print(output_prediction.flatten().astype(int)[100:105])
 
-# Generate new random input for testing
-input_test = np.array([generate_random_sequence(input_size)])
-print("here is test input:")
-print(input_test)
-# Make predictions using the trained model
-output_prediction = model.predict(input_test)
+    # Specify the file path in the script directory
+    file_path = os.path.join(script_dir, "generated_sequence.txt")
 
-# Apply a threshold to convert values to 0 or 1
-threshold = 0.5
-output_prediction_binary = (output_prediction > threshold).astype(int)
+    # Save the flattened generated pseudorandom sequence to the file without new lines
+    with open(file_path, "w") as file:
+        file.write("".join(map(str, output_prediction_binary.ravel())))
 
-# Print the generated pseudorandom sequence
-print("Generated Pseudorandom Sequence:")
-print(output_prediction.flatten().astype(int))
-print(output_prediction.flatten().astype(int)[100:105])
+    # Print the file path for reference
+    print("Generated sequence saved to:", file_path)
 
-# Specify the file path in the script directory
-file_path = os.path.join(script_dir, "generated_sequence.txt")
+    # Specify the file path in the script directory
+    output_file_path = os.path.join(script_dir, "prediction.bin")
 
-# Save the flattened generated pseudorandom sequence to the file without new lines
-with open(file_path, "w") as file:
-    file.write("".join(map(str, output_prediction_binary.ravel())))
+    # Flatten the list if it's nested
+    flat_output = [item for sublist in output_prediction_binary.tolist() for item in sublist]
 
-# Print the file path for reference
-print("Generated sequence saved to:", file_path)
+    # Convert the binary predictions to a binary string
+    binary_representation = ''.join(map(str, flat_output))
 
-# Specify the file path in the script directory
-output_file_path = os.path.join(script_dir, "prediction.bin")
+    # Save the binary representation to prediction.bin
+    with open(output_file_path, 'wb') as output_file:
+        output_file.write(binary_representation.encode('utf-8'))
 
-# Flatten the list if it's nested
-flat_output = [item for sublist in output_prediction_binary.tolist() for item in sublist]
+    # Print the file path for reference
+    print("Binary Predictions saved to:", output_file_path)
 
-# Convert the binary predictions to a binary string
-binary_representation = ''.join(map(str, flat_output))
+trained=False
 
-# Save the binary representation to prediction.bin
-with open(output_file_path, 'wb') as output_file:
-    output_file.write(binary_representation.encode('utf-8'))
+"""
+# Function to clear the menu lines
+def clear_menu_lines():
+    # ANSI escape code to move the cursor to the beginning of the previous line
+    print("\033[F\033[K" * 6)
+"""
+    
+thereismodel=False
 
-# Print the file path for reference
-print("Binary Predictions saved to:", output_file_path)
+while True:
+    #clear_menu_lines()  # Clear menu lines
+    
+    print("\nMenu:")
+    print("0 - Create Model")
+    print("1 - Load Model")
+    print("2 - Train Model")
+    print("3 - Test Model")
+    print("4 - Save Model")
 
+    choice = input("Enter your choice (0-4, or 'q' to quit): ")
 
-
+    if choice=='0':
+        model=create_model(input_size)
+        thereismodel=True
+    elif choice == '1':
+        model, model_path = load_the_model(input_size)
+        thereismodel=True
+    elif choice == '2':
+        if thereismodel:
+            model = train_model(model)
+            trained=True
+        else:
+            print("Please make the model first.") 
+    elif choice == '3':
+        if thereismodel:
+            test_model(model)
+        else:
+            print("Please make the model first.")
+    elif choice == '4':
+        if thereismodel:
+            save_model(model, model_path)
+        else:
+            print("Please make the model first.")       
+    elif choice.lower() == 'q':
+        break
+    else:
+        print("Invalid choice. Please enter a number between 1 and 4, or 'q' to quit.")
