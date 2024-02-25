@@ -3,12 +3,14 @@ import tensorflow as tf
 from tensorflow.keras import layers, models
 from tensorflow.keras.models import load_model
 import numpy as np
+from compression_model import *
+
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
+comp_model_path = os.path.join(script_dir, 'comp_model_weights.h5')
 file_path = os.path.join(script_dir, 'train_data.txt')
-model_path= os.path.join(script_dir, 'model.h5')
+model_path = os.path.join(script_dir, 'model_weights.h5')
 #output_file_path = os.path.join(script_dir, 'binary2.bin')
-
 # Generate random sequences for training
 num_samples = 1000
 input_size = 32
@@ -45,10 +47,16 @@ def load_the_model(input_size):
         print("Existing model not found. Creating a new model.")
         model = create_model(input_size)
 
-    return model, model_path
+    return model
 
 # Convert binary representation to a list of integers
 binary_list = [int(bit) for bit in binary_representation]
+
+sample_size = len(binary_list) // num_samples
+# Create training data
+X_train = np.array([generate_random_sequence(input_size) for _ in range(num_samples)])
+# Split binary_list into 100 samples for y_train
+y_train = np.array([binary_list[i*sample_size : (i+1)*sample_size] for i in range(num_samples)])
 
 #print("Binary List:", binary_list)
 #print(len(binary_list))
@@ -74,18 +82,11 @@ def create_model(input_size):
     
     return model
 
-def train_model(model):
-    # Train the model
-    sample_size = len(binary_list) // num_samples
-    # Create training data
-    X_train = np.array([generate_random_sequence(input_size) for _ in range(num_samples)])
-    # Split binary_list into 100 samples for y_train
-    y_train = np.array([binary_list[i*sample_size : (i+1)*sample_size] for i in range(num_samples)])
-    
+def train_model(model):    
     model.fit(X_train, y_train, epochs=200, batch_size=32)
     return model
 
-def save_model(model, model_path):
+def save_model(model):
     model.save(model_path)
     print("Model saved successfully.")
 
@@ -143,8 +144,14 @@ def clear_menu_lines():
     
 thereismodel=False
 
+def ask_which():
+    print("0 - Generative Model")
+    print("1 - Compression Model")       
+    choice = input("which model?: ")
+    return choice
+
 while True:
-    #clear_menu_lines()  # Clear menu lines
+    #clear_menu_lines() 
     
     print("\nMenu:")
     print("0 - Create Model")
@@ -156,25 +163,46 @@ while True:
     choice = input("Enter your choice (0-4, or 'q' to quit): ")
 
     if choice=='0':
-        model=create_model(input_size)
+        choice2 = ask_which()
+        if choice2 == '0':      
+            model=create_model(input_size)
+        elif choice2 == '1':
+            comp_model = create_comp_model(1024) 
         thereismodel=True
+        print("Model created.") 
     elif choice == '1':
-        model, model_path = load_the_model(input_size)
+        choice2 = ask_which()
+        if choice2 == '0':      
+            model = load_the_model(input_size)
+        elif choice2 == '1':
+            comp_model = load_comp_model(1024)
         thereismodel=True
     elif choice == '2':
         if thereismodel:
-            model = train_model(model)
+            choice2 = ask_which()
+            if choice2 == '0':      
+                model = train_model(model)
+            elif choice2 == '1':
+                comp_model = train_comp_model(comp_model, y_train)
             trained=True
         else:
             print("Please make the model first.") 
     elif choice == '3':
         if thereismodel:
-            test_model(model)
+            choice2 = ask_which()
+            if choice2 == '0':      
+                test_model(model)
+            elif choice2 == '1':
+                test_whole(model,comp_model,1024)
         else:
             print("Please make the model first.")
     elif choice == '4':
         if thereismodel:
-            save_model(model, model_path)
+            choice2 = ask_which()
+            if choice2 == '0':      
+                save_model(model)
+            elif choice2 == '1':
+                save_comp_model(comp_model)
         else:
             print("Please make the model first.")       
     elif choice.lower() == 'q':
