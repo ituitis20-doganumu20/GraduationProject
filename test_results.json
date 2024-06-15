@@ -1,0 +1,713 @@
+{
+    "processed_files": [
+        "output_100.txt",
+        "output_103.txt",
+        "output_107.txt",
+        "output_108.txt",
+        "output_11.txt",
+        "output_110.txt",
+        "output_111.txt",
+        "output_114.txt",
+        "output_115.txt",
+        "output_117.txt",
+        "output_118.txt",
+        "output_120.txt",
+        "output_122.txt",
+        "output_125.txt",
+        "output_126.txt",
+        "output_127.txt",
+        "output_129.txt",
+        "output_132.txt",
+        "output_14.txt",
+        "output_15.txt",
+        "output_18.txt",
+        "output_19.txt",
+        "output_2.txt",
+        "output_22.txt",
+        "output_25.txt",
+        "output_27.txt",
+        "output_30.txt",
+        "output_32.txt",
+        "output_35.txt",
+        "output_40.txt",
+        "output_41.txt",
+        "output_42.txt",
+        "output_43.txt",
+        "output_44.txt",
+        "output_45.txt",
+        "output_46.txt",
+        "output_49.txt",
+        "output_52.txt",
+        "output_53.txt",
+        "output_54.txt",
+        "output_56.txt",
+        "output_58.txt",
+        "output_6.txt",
+        "output_60.txt",
+        "output_62.txt",
+        "output_63.txt",
+        "output_67.txt",
+        "output_71.txt",
+        "output_75.txt",
+        "output_79.txt",
+        "output_80.txt",
+        "output_81.txt",
+        "output_85.txt",
+        "output_86.txt",
+        "output_89.txt",
+        "output_90.txt",
+        "output_91.txt",
+        "output_94.txt",
+        "output_96.txt",
+        "output_97.txt",
+        "output_99.txt"
+    ],
+    "failed_files": [
+        {
+            "file_name": "output_0.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_1.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)"
+            ]
+        },
+        {
+            "file_name": "output_10.txt",
+            "failed_tests": [
+                "Non-overlapping Template Matching"
+            ]
+        },
+        {
+            "file_name": "output_101.txt",
+            "failed_tests": [
+                "Random Excursions Test",
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_102.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)",
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_104.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_105.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_106.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_109.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_112.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Run Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_113.txt",
+            "failed_tests": [
+                "Spectral Test"
+            ]
+        },
+        {
+            "file_name": "output_116.txt",
+            "failed_tests": [
+                "Approximate Entropy Test"
+            ]
+        },
+        {
+            "file_name": "output_119.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Approximate Entropy Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_12.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_121.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_123.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_124.txt",
+            "failed_tests": [
+                "Binary Matrix Rank Test",
+                "Non-overlapping Template Matching"
+            ]
+        },
+        {
+            "file_name": "output_128.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_13.txt",
+            "failed_tests": [
+                "Run Test",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_130.txt",
+            "failed_tests": [
+                "Non-overlapping Template Matching"
+            ]
+        },
+        {
+            "file_name": "output_131.txt",
+            "failed_tests": [
+                "Cumulative Sums (Forward)"
+            ]
+        },
+        {
+            "file_name": "output_16.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_17.txt",
+            "failed_tests": [
+                "Binary Matrix Rank Test"
+            ]
+        },
+        {
+            "file_name": "output_20.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_21.txt",
+            "failed_tests": [
+                "Cumulative Sums (Forward)"
+            ]
+        },
+        {
+            "file_name": "output_23.txt",
+            "failed_tests": [
+                "Overlapping Template Matching"
+            ]
+        },
+        {
+            "file_name": "output_24.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Binary Matrix Rank Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)",
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_26.txt",
+            "failed_tests": [
+                "Random Excursions Test",
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_28.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_29.txt",
+            "failed_tests": [
+                "Linear Complexity Test"
+            ]
+        },
+        {
+            "file_name": "output_3.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_31.txt",
+            "failed_tests": [
+                "Run Test"
+            ]
+        },
+        {
+            "file_name": "output_33.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_34.txt",
+            "failed_tests": [
+                "Spectral Test"
+            ]
+        },
+        {
+            "file_name": "output_36.txt",
+            "failed_tests": [
+                "Universal Statistical Test"
+            ]
+        },
+        {
+            "file_name": "output_37.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_38.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)"
+            ]
+        },
+        {
+            "file_name": "output_39.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_4.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_47.txt",
+            "failed_tests": [
+                "Random Excursions Test",
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_48.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_5.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_50.txt",
+            "failed_tests": [
+                "Run Test"
+            ]
+        },
+        {
+            "file_name": "output_51.txt",
+            "failed_tests": [
+                "Random Excursions Test",
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_55.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_57.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_59.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_61.txt",
+            "failed_tests": [
+                "Linear Complexity Test"
+            ]
+        },
+        {
+            "file_name": "output_64.txt",
+            "failed_tests": [
+                "Random Excursions Test",
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_65.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_66.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_68.txt",
+            "failed_tests": [
+                "Serial Test"
+            ]
+        },
+        {
+            "file_name": "output_69.txt",
+            "failed_tests": [
+                "Approximate Entropy Test"
+            ]
+        },
+        {
+            "file_name": "output_7.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_70.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_72.txt",
+            "failed_tests": [
+                "Spectral Test"
+            ]
+        },
+        {
+            "file_name": "output_73.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_74.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_76.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_77.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_78.txt",
+            "failed_tests": [
+                "Binary Matrix Rank Test",
+                "Serial Test",
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_8.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_82.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_83.txt",
+            "failed_tests": [
+                "Universal Statistical Test"
+            ]
+        },
+        {
+            "file_name": "output_84.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Non-overlapping Template Matching",
+                "Universal Statistical Test",
+                "Cumulative Sums (Forward)"
+            ]
+        },
+        {
+            "file_name": "output_87.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_88.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_9.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_92.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "output_93.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "output_95.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "output_98.txt",
+            "failed_tests": [
+                "Random Excursions Test",
+                "Random Excursions Variant Test"
+            ]
+        }
+    ],
+    "test_averages": {
+        "Frequency Test": {
+            "Main": [
+                0.33918745379815485
+            ]
+        },
+        "Block Frequency Test": {
+            "Main": [
+                0.9178772962023607
+            ]
+        },
+        "Run Test": {
+            "Main": [
+                0.4328104009172283
+            ]
+        },
+        "Longest Run of Ones": {
+            "Main": [
+                0.328958047297672
+            ]
+        },
+        "Binary Matrix Rank Test": {
+            "Main": [
+                0.33948139100530017
+            ]
+        },
+        "Spectral Test": {
+            "Main": [
+                0.21197504739692377
+            ]
+        },
+        "Non-overlapping Template Matching": {
+            "Main": [
+                0.5139583599675475
+            ]
+        },
+        "Overlapping Template Matching": {
+            "Main": [
+                0.23450580487397565
+            ]
+        },
+        "Universal Statistical Test": {
+            "Main": [
+                0.5765992700490786
+            ]
+        },
+        "Linear Complexity Test": {
+            "Main": [
+                0.5353554132334173
+            ]
+        },
+        "Serial Test": {
+            "Serial 1": [
+                0.3452164454004427
+            ],
+            "Serial 2": [
+                0.5587562457354172
+            ]
+        },
+        "Approximate Entropy Test": {
+            "Main": [
+                0.6627123181161824
+            ]
+        },
+        "Cumulative Sums (Forward)": {
+            "Main": [
+                0.3413696614826102
+            ]
+        },
+        "Cumulative Sums (Backward)": {
+            "Main": [
+                0.3901112859446832
+            ]
+        },
+        "Random Excursions Test": {
+            "-4": [
+                0.6947347955820045
+            ],
+            "-3": [
+                0.18105602806059296
+            ],
+            "-2": [
+                0.35262652862305727
+            ],
+            "-1": [
+                0.3536214008578946
+            ],
+            "+1": [
+                0.4220272644729287
+            ],
+            "+2": [
+                0.5375666920478778
+            ],
+            "+3": [
+                0.33677728837680854
+            ],
+            "+4": [
+                0.40462261345542505
+            ]
+        },
+        "Random Excursions Variant Test": {
+            "-9.0": [
+                0.8266729256067149
+            ],
+            "-8.0": [
+                0.6605811834574877
+            ],
+            "-7.0": [
+                0.5683502490397829
+            ],
+            "-6.0": [
+                0.5364338093333232
+            ],
+            "-5.0": [
+                0.6496520859715538
+            ],
+            "-4.0": [
+                0.7415901845519235
+            ],
+            "-3.0": [
+                0.8057285206697345
+            ],
+            "-2.0": [
+                0.6585667562908364
+            ],
+            "-1.0": [
+                0.40728061052270675
+            ],
+            "+1.0": [
+                0.6436410595397573
+            ],
+            "+2.0": [
+                0.7503330209175014
+            ],
+            "+3.0": [
+                0.7622675245948363
+            ],
+            "+4.0": [
+                0.6553251382287764
+            ],
+            "+5.0": [
+                0.5962205684506401
+            ],
+            "+6.0": [
+                0.5313736581463117
+            ],
+            "+7.0": [
+                0.6965576085642082
+            ],
+            "+8.0": [
+                0.7901062175051441
+            ],
+            "+9.0": [
+                0.7533736571642395
+            ]
+        }
+    }
+}

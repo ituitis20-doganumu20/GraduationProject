@@ -1,0 +1,434 @@
+{
+    "processed_files": [
+        "pyrand_out_1.txt",
+        "pyrand_out_10.txt",
+        "pyrand_out_100.txt",
+        "pyrand_out_101.txt",
+        "pyrand_out_102.txt",
+        "pyrand_out_103.txt",
+        "pyrand_out_104.txt",
+        "pyrand_out_105.txt",
+        "pyrand_out_107.txt",
+        "pyrand_out_109.txt",
+        "pyrand_out_11.txt",
+        "pyrand_out_110.txt",
+        "pyrand_out_111.txt",
+        "pyrand_out_112.txt",
+        "pyrand_out_113.txt",
+        "pyrand_out_117.txt",
+        "pyrand_out_118.txt",
+        "pyrand_out_119.txt",
+        "pyrand_out_12.txt",
+        "pyrand_out_120.txt",
+        "pyrand_out_121.txt",
+        "pyrand_out_122.txt",
+        "pyrand_out_123.txt",
+        "pyrand_out_124.txt",
+        "pyrand_out_125.txt",
+        "pyrand_out_126.txt",
+        "pyrand_out_128.txt",
+        "pyrand_out_129.txt",
+        "pyrand_out_130.txt",
+        "pyrand_out_131.txt",
+        "pyrand_out_132.txt",
+        "pyrand_out_14.txt",
+        "pyrand_out_16.txt",
+        "pyrand_out_17.txt",
+        "pyrand_out_18.txt",
+        "pyrand_out_19.txt",
+        "pyrand_out_2.txt",
+        "pyrand_out_20.txt",
+        "pyrand_out_22.txt",
+        "pyrand_out_24.txt",
+        "pyrand_out_25.txt",
+        "pyrand_out_26.txt",
+        "pyrand_out_27.txt",
+        "pyrand_out_28.txt",
+        "pyrand_out_3.txt",
+        "pyrand_out_30.txt",
+        "pyrand_out_32.txt",
+        "pyrand_out_33.txt",
+        "pyrand_out_34.txt",
+        "pyrand_out_35.txt",
+        "pyrand_out_36.txt",
+        "pyrand_out_38.txt",
+        "pyrand_out_39.txt",
+        "pyrand_out_4.txt",
+        "pyrand_out_40.txt",
+        "pyrand_out_41.txt",
+        "pyrand_out_42.txt",
+        "pyrand_out_43.txt",
+        "pyrand_out_45.txt",
+        "pyrand_out_46.txt",
+        "pyrand_out_47.txt",
+        "pyrand_out_48.txt",
+        "pyrand_out_49.txt",
+        "pyrand_out_51.txt",
+        "pyrand_out_52.txt",
+        "pyrand_out_53.txt",
+        "pyrand_out_54.txt",
+        "pyrand_out_56.txt",
+        "pyrand_out_57.txt",
+        "pyrand_out_58.txt",
+        "pyrand_out_59.txt",
+        "pyrand_out_6.txt",
+        "pyrand_out_60.txt",
+        "pyrand_out_62.txt",
+        "pyrand_out_63.txt",
+        "pyrand_out_64.txt",
+        "pyrand_out_65.txt",
+        "pyrand_out_66.txt",
+        "pyrand_out_67.txt",
+        "pyrand_out_68.txt",
+        "pyrand_out_69.txt",
+        "pyrand_out_7.txt",
+        "pyrand_out_70.txt",
+        "pyrand_out_72.txt",
+        "pyrand_out_73.txt",
+        "pyrand_out_76.txt",
+        "pyrand_out_77.txt",
+        "pyrand_out_78.txt",
+        "pyrand_out_79.txt",
+        "pyrand_out_8.txt",
+        "pyrand_out_80.txt",
+        "pyrand_out_81.txt",
+        "pyrand_out_82.txt",
+        "pyrand_out_83.txt",
+        "pyrand_out_84.txt",
+        "pyrand_out_85.txt",
+        "pyrand_out_87.txt",
+        "pyrand_out_88.txt",
+        "pyrand_out_89.txt",
+        "pyrand_out_9.txt",
+        "pyrand_out_91.txt",
+        "pyrand_out_92.txt",
+        "pyrand_out_93.txt",
+        "pyrand_out_94.txt",
+        "pyrand_out_95.txt",
+        "pyrand_out_99.txt"
+    ],
+    "failed_files": [
+        {
+            "file_name": "pyrand_out_106.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_108.txt",
+            "failed_tests": [
+                "Universal Statistical Test",
+                "Random Excursions Test",
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_114.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_115.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_116.txt",
+            "failed_tests": [
+                "Approximate Entropy Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_127.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_13.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_15.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_21.txt",
+            "failed_tests": [
+                "Serial Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_23.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_29.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_31.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_37.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Forward)",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_44.txt",
+            "failed_tests": [
+                "Linear Complexity Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_5.txt",
+            "failed_tests": [
+                "Overlapping Template Matching"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_50.txt",
+            "failed_tests": [
+                "Serial Test",
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_55.txt",
+            "failed_tests": [
+                "Spectral Test",
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_61.txt",
+            "failed_tests": [
+                "Linear Complexity Test",
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_71.txt",
+            "failed_tests": [
+                "Longest Run of Ones"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_74.txt",
+            "failed_tests": [
+                "Frequency Test",
+                "Cumulative Sums (Backward)"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_75.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_86.txt",
+            "failed_tests": [
+                "Random Excursions Test",
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_90.txt",
+            "failed_tests": [
+                "Binary Matrix Rank Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_96.txt",
+            "failed_tests": [
+                "Random Excursions Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_97.txt",
+            "failed_tests": [
+                "Random Excursions Variant Test"
+            ]
+        },
+        {
+            "file_name": "pyrand_out_98.txt",
+            "failed_tests": [
+                "Spectral Test"
+            ]
+        }
+    ],
+    "test_averages": {
+        "Frequency Test": {
+            "Main": [
+                0.5707831083626094
+            ]
+        },
+        "Block Frequency Test": {
+            "Main": [
+                0.40917804286193366
+            ]
+        },
+        "Run Test": {
+            "Main": [
+                0.27930071535029316
+            ]
+        },
+        "Longest Run of Ones": {
+            "Main": [
+                0.45118520597796147
+            ]
+        },
+        "Binary Matrix Rank Test": {
+            "Main": [
+                0.132896335324303
+            ]
+        },
+        "Spectral Test": {
+            "Main": [
+                0.7213076659589068
+            ]
+        },
+        "Non-overlapping Template Matching": {
+            "Main": [
+                0.4181211507135404
+            ]
+        },
+        "Overlapping Template Matching": {
+            "Main": [
+                0.2418670047351586
+            ]
+        },
+        "Universal Statistical Test": {
+            "Main": [
+                0.25901731339796324
+            ]
+        },
+        "Linear Complexity Test": {
+            "Main": [
+                0.3203037401906974
+            ]
+        },
+        "Serial Test": {
+            "Serial 1": [
+                0.29037375592616305
+            ],
+            "Serial 2": [
+                0.6281675425472347
+            ]
+        },
+        "Approximate Entropy Test": {
+            "Main": [
+                0.10263253009209185
+            ]
+        },
+        "Cumulative Sums (Forward)": {
+            "Main": [
+                0.6763638008867416
+            ]
+        },
+        "Cumulative Sums (Backward)": {
+            "Main": [
+                0.5250159135571828
+            ]
+        },
+        "Random Excursions Test": {
+            "-4": [
+                0.6447698689162394
+            ],
+            "-3": [
+                0.5389222267917532
+            ],
+            "-2": [
+                0.7092000806157575
+            ],
+            "-1": [
+                0.7463383697399701
+            ],
+            "+1": [
+                0.561694360638396
+            ],
+            "+2": [
+                0.5151561950071535
+            ],
+            "+3": [
+                0.5617489203793494
+            ],
+            "+4": [
+                0.41479299866937536
+            ]
+        },
+        "Random Excursions Variant Test": {
+            "-9.0": [
+                0.3748933345831909
+            ],
+            "-8.0": [
+                0.39710140121968285
+            ],
+            "-7.0": [
+                0.36711224772228745
+            ],
+            "-6.0": [
+                0.40322163694062246
+            ],
+            "-5.0": [
+                0.40964697873678485
+            ],
+            "-4.0": [
+                0.40319901780367995
+            ],
+            "-3.0": [
+                0.5104955403655532
+            ],
+            "-2.0": [
+                0.5172007551798563
+            ],
+            "-1.0": [
+                0.6267939523378914
+            ],
+            "+1.0": [
+                0.5267636935811784
+            ],
+            "+2.0": [
+                0.4574730760118325
+            ],
+            "+3.0": [
+                0.39366883495886973
+            ],
+            "+4.0": [
+                0.45527317719094396
+            ],
+            "+5.0": [
+                0.5985738467790542
+            ],
+            "+6.0": [
+                0.6459563556979799
+            ],
+            "+7.0": [
+                0.6619597631332816
+            ],
+            "+8.0": [
+                0.5827141704686397
+            ],
+            "+9.0": [
+                0.5776990609215311
+            ]
+        }
+    }
+}
